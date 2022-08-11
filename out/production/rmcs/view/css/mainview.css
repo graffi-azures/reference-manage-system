@@ -1,0 +1,5 @@
+.btnssp {
+}
+.btnssp:hover Region {
+    -fx-background-image: url("../imgitem/双上_double-up.png");
+}

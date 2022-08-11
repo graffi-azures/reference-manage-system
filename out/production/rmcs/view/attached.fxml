@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttaController">
+    <right>
+        <VBox fx:id="rightarea" prefWidth="250.0">
+            <children>
+                <TableView fx:id="tvAtta" prefHeight="662.0" prefWidth="250.0">
+                    <columns>
+                        <TableColumn fx:id="clAtta" prefWidth="75.0" text="附件" />
+                        <TableColumn fx:id="clAcontent" prefWidth="172.20006561279297" text="文献附件" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </right>
+
+</BorderPane>

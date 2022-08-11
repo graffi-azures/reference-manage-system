@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IntnOnlController">
+    <left>
+        <VBox fx:id="iomode" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="labTitle" alignment="CENTER" prefWidth="200.0" text="My Library">
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin></Label>
+                <ToggleButton fx:id="btnAlRe" mnemonicParsing="false" prefWidth="200.0" text="All References">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton fx:id="btnRcAd" mnemonicParsing="false" prefWidth="200.0" text="Recently Added">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton fx:id="btnUnfi" mnemonicParsing="false" prefWidth="200.0" text="Unfiled">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton fx:id="btnTrsh" mnemonicParsing="false" prefWidth="200.0" text="Trash">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </ToggleButton>
+                <StackPane fx:id="leftIO" prefWidth="200.0">
+                    <children>
+                        <MenuButton alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Online Search" StackPane.alignment="TOP_LEFT">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="AT Still U" />
+                                <MenuItem mnemonicParsing="false" text="Library of Congress" />
+                                <MenuItem mnemonicParsing="false" text="LISTA" />
+                            </items>
+                        </MenuButton>
+                    </children>
+                </StackPane>
+                <TitledPane fx:id="selectgroup" alignment="CENTER" animated="false" text="MyGroup">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" />
+                    </content>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </TitledPane>
+            </children></VBox>
+    </left>
+
+</BorderPane>
+

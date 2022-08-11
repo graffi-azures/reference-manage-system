@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane prefHeight="300.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditRefController">
+    <fx:define>
+        <fx:include fx:id="RefContent" source="editRefChildRef.fxml" />
+        <fx:include fx:id="AtaContent" source="editRefChildAta.fxml" />
+    </fx:define>
+    <center>
+        <TabPane prefHeight="300.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab fx:id="refTab" closable="false" content="$RefContent" text="Reference">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                    </content>
+                </Tab>
+                <Tab fx:id="ataTab" closable="false" content="$AtaContent" text="Attached">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+    <top>
+        <HBox alignment="BASELINE_LEFT" prefHeight="28.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" prefHeight="26.0" text="New Reference">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                    </HBox.margin>
+                </Label>
+                <Button fx:id="btnNewRef" alignment="CENTER" mnemonicParsing="false" onMouseReleased="#onNewRefClickAction" prefHeight="25.0" text="Confirm" textAlignment="RIGHT" translateX="500.0">
+                    <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </top>
+</BorderPane>
+

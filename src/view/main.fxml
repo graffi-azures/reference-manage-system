@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="wholePage" prefHeight="800.0" prefWidth="1200.0" stylesheets="@css/mainview.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <!--   <fx:define>-->
+    <!--      <fx:include fx:id="llmMenu" source="llmode.fxml" />-->
+    <!--      <fx:include fx:id="osmMenu" source="osmode.fxml" />-->
+    <!--      <fx:include fx:id="iomMenu" source="iomode.fxml" />-->
+    <!--   </fx:define>-->
+    <top>
+        <VBox fx:id="topnav" prefHeight="70.0" BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <HBox prefHeight="70.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="btnLLM" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#llmButtonClicked" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnOSM" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#osmButtonClicked" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnIOM" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#iomButtonClicked" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <ChoiceBox fx:id="selectBStyle" prefWidth="150.0">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                            </padding>
+                        </ChoiceBox>
+                        <Button fx:id="btnCTL" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#onCtlAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnNRF" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#onNrPopupAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnIMP" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#OnIfPopupAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnEXP" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#OnExportFileAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnOPF" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#onOpenFolderAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnISC" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#onInsertCitationAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnFOB" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#onFormatAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnTWD" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#onToWordAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnSYL" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#onEditAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnSRE" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#onShareAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnHLP" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onMouseReleased="#onHelpPopupAction" prefHeight="35.0" prefWidth="35.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <TextField fx:id="txtSearchBox" prefHeight="23.0" prefWidth="165.0" promptText="请输入标题关键字">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btnQS" mnemonicParsing="false" onMouseReleased="#onQkSearchAction" prefHeight="20.0" prefWidth="20.0">
+                            <HBox.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnSSP" mnemonicParsing="false" onMouseReleased="#onSearchPopupAction" prefWidth="180.0" styleClass="btnssp" text="Show Search Panel">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                            <graphic>
+                                <StackPane prefHeight="25.0" prefWidth="180.0" translateX="-4.0">
+                                    <children>
+                                        <Region maxHeight="25.0" maxWidth="25.0" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="TOP_LEFT" />
+                                    </children>
+                                </StackPane>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <left>
+        <VBox fx:id="leftnav" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" prefWidth="200.0" text="My Library">
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin></Label>
+                <ToggleButton fx:id="btnAlRe" mnemonicParsing="false" onMouseReleased="#onListAllRefAction" prefWidth="200.0" text="All References">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="leftside" />
+                    </toggleGroup>
+                </ToggleButton>
+                <ToggleButton fx:id="btnRcAd" mnemonicParsing="false" onMouseReleased="#onListRecAddAction" prefWidth="200.0" text="Recently Added" toggleGroup="$leftside">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton fx:id="btnUnfi" mnemonicParsing="false" onMouseReleased="#onListUnfiledAction" prefWidth="200.0" text="Unfiled" toggleGroup="$leftside">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton fx:id="btnTrsh" mnemonicParsing="false" onMouseReleased="#onListTrashAction" prefWidth="200.0" text="Trash" toggleGroup="$leftside">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </ToggleButton>
+                <ToggleButton fx:id="btnMsg" mnemonicParsing="false" onMouseReleased="#onMsgPopupAction" prefWidth="200.0" text="Message" toggleGroup="$leftside">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </ToggleButton>
+                <TitledPane fx:id="selectgroup" alignment="CENTER" animated="false" text="MyGroup" visible="false">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="200.0" />
+                    </content>
+                </TitledPane>
+            </children></VBox>
+    </left>
+    <right>
+        <VBox fx:id="rightside" prefHeight="200.0" prefWidth="250.0">
+            <children>
+                <HBox fx:id="rightnav" prefHeight="25.0" prefWidth="100.0">
+                    <children>
+                        <ToggleButton fx:id="btnRefe" mnemonicParsing="false" onAction="#RefeButtonClicked" prefWidth="83.0" text="Reference" />
+                        <ToggleButton fx:id="btnPrev" mnemonicParsing="false" onAction="#PrevButtonClicked" prefWidth="83.0" text="Preview" />
+                        <ToggleButton fx:id="btnAtta" mnemonicParsing="false" onAction="#AttaButtonClicked" prefWidth="83.0" text="Attach PDF" />
+                    </children>
+                </HBox>
+                <VBox fx:id="rightarea" prefWidth="250.0">
+                    <children>
+                        <TableView prefHeight="662.0" prefWidth="250.0">
+                            <columns>
+                                <TableColumn prefWidth="75.0" text="简介" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children></VBox>
+    </right>
+    <bottom>
+        <FlowPane fx:id="bottom" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </bottom>
+    <center>
+        <VBox fx:id="content" maxWidth="750.0" BorderPane.alignment="TOP_LEFT">
+            <children>
+                <TableView fx:id="tvCenter" prefHeight="700.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="clAuthor" prefWidth="100.0" text="Author" />
+                        <TableColumn fx:id="clYear" prefWidth="90.0" text="Year" />
+                        <TableColumn fx:id="clTitle" prefWidth="170.0" text="Title" />
+                        <TableColumn fx:id="clRating" prefWidth="90.0" text="Rating" />
+                        <TableColumn fx:id="clJournal" prefWidth="100.0" text="Journal" />
+                        <TableColumn fx:id="clUpdated" prefWidth="100.0" text="Last Updated" />
+                        <TableColumn fx:id="clType" prefWidth="100.0" text="Reference type" />
+                    </columns>
+                </TableView>
+            </children></VBox>
+    </center>
+</BorderPane>

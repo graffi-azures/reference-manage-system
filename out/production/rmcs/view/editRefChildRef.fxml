@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<VBox fx:id="refContent" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChildEditRefController">
+    <children>
+        <ScrollPane prefHeight="230.0" prefWidth="600.0">
+            <content>
+                <VBox prefWidth="620.0">
+                    <children>
+                        <Label text="请输入文献信息:">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label text="Author:">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></Label>
+                        <TextField fx:id="txtAuthor" prefHeight="26.0">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" />
+                            </VBox.margin></TextField>
+                        <Label text="Year:">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></Label>
+                        <TextField fx:id="txtYear" prefHeight="26.0" promptText="只能输入4位数年份,如2021">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label text="Title:">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></Label>
+                        <TextField fx:id="txtTitle" prefHeight="26.0">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></TextField>
+                        <HBox prefHeight="26.0">
+                            <children>
+                                <Label text="Rating:">
+                                    <padding>
+                                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </Label>
+                                <ComboBox fx:id="comboRating" editable="true" prefHeight="26.0" prefWidth="200.0">
+                                    <HBox.margin>
+                                        <Insets top="5.0" />
+                                    </HBox.margin>
+                                </ComboBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <Label text="Journal:">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></Label>
+                        <TextField fx:id="txtJournal" prefHeight="26.0">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></TextField>
+                        <Label text="LastUpdate:">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></Label>
+                        <DatePicker fx:id="txtLastUpdate" prefHeight="26.0" promptText="请选择日期：">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></DatePicker>
+                        <Label text="Type:">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></Label>
+                        <TextField fx:id="txtType" prefHeight="26.0">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></TextField>
+                        <Label text="Categoryid:">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin></Label>
+                        <TextField fx:id="txtCategoryid" prefHeight="26.0" promptText="只能输入1到99的整数">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" />
+                            </VBox.margin></TextField>
+                        <Label text="Group:">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="txtGroup" prefHeight="26.0" promptText="自定义分类名">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</VBox>
+

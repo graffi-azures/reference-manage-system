@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="365.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelpController">
+   <children>
+      <VBox layoutX="70.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Label prefHeight="24.0" prefWidth="118.0" text="输入要查询的关键字">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtSrcBox" prefWidth="422.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></TextField>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="帮助内容如下:">
+                     <HBox.margin>
+                        <Insets right="223.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="btnSrch" mnemonicParsing="false" onMouseReleased="#onSearchAction" prefWidth="60.0" text="搜索" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tvHelp" prefHeight="300.0">
+              <columns>
+                <TableColumn fx:id="clId" prefWidth="85.80002117156982" text="编号" />
+                <TableColumn fx:id="clContent" prefWidth="335.79994201660156" text="内容" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
